@@ -1,0 +1,5 @@
+# Ignore the JAR exports
+export/**
+
+# Ignore files used by VSCode
+.vscode/**
