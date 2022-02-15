@@ -1,4 +1,4 @@
-package com.misery.checksum.subcommands;
+package com.misery.checksum.command;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +32,7 @@ public class Update extends BaseCommand {
     try {
       self.connect();
     } catch (Exception err) {
-      err.printStackTrace();
+      System.err.println(err);
     } finally {
       System.out.println("Program exited with code " + self.stat);
     }

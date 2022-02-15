@@ -2,8 +2,9 @@ package com.misery.checksum.internal;
 
 import java.util.concurrent.Callable;
 
-import picocli.CommandLine.*;
+import picocli.CommandLine.Command;
 import picocli.CommandLine.Model.CommandSpec;
+import picocli.CommandLine.Spec;
 
 // @Command(descriptionHeading = "Description:\n  ", parameterListHeading = "Positional Arguments:\n", optionListHeading = "Optional Flags:\n", synopsisHeading = "Usage:\n  ", exitCodeListHeading = "Error Codes:\n", exitCodeList = {
 //     "0: Successful Execution. This means everything went well",
@@ -23,8 +24,8 @@ public abstract class BaseCommand implements Callable<Integer> {
 
   // @Command(name = "help", description = "Shows Program usage and exit")
 
-  @Mixin
-  LoggingMixin logging;
+  // @Mixin
+  // LoggingMixin logging;
 
   public Integer call() {
     System.out.println(

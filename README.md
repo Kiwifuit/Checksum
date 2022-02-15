@@ -1,6 +1,16 @@
 # Checksum Creator
 A simple project to get me used to Java's `picocli` which is, in fact, vastly superior to Python's `arparse` module (sorry, `argparse`. Though you're built into the Python Standard Library, you don't have ANSI coloring for parameters)
 
+[Go to the Changelog](CHANGELOG.md) to see the current changes to the project
+
+## Table of Contents
+- [Checksum Creator](#checksum-creator)
+  - [Table of Contents](#table-of-contents)
+- [Why Java?](#why-java)
+- [Usage](#usage)
+- [Checksum](#checksum)
+- [TODO](#todo)
+
 # Why Java?
 Well, I've been considerably inactive when using my GitHub, but I've learned C++ and Java now, the latter being my favorite besides Python for various reasons like Jars, *actual* build tools like Apache Maven and Gradle, and namespaced projects. You don't get that in Python
 
@@ -39,8 +49,8 @@ Optional flags & subcommands can be found by passing in `help` instead of `check
 # Checksum
 A program that is written to compute checksums yet doesn't have its own checksum is kinda silly, so here's the official checksum for the current release
 ```
-SHA256 Checksum of checksum-0.0.3.jar:
-  215c9d926412d8fe79a62d69cec8b47c8f01c99b619c62e38719346dcaf9f4cd
+SHA-256 Checksum of checksum-0.0.4.jar:
+  00e121ef0f191368869c9e6b7815e076de164caf1b4f9458d1efef10588f13c7
 ```
 
 # TODO
@@ -50,3 +60,5 @@ SHA256 Checksum of checksum-0.0.3.jar:
   - Basically a class that downloads the latest JAR and replaces the old one, maybe making a dump just in case stuff breaks
   - Probably gonna make it optional/runnable with a command
 - [ ] A suite of tools that are bundled with the JAR to *maybe* help debug the program
+- [ ] Write `ExceptionMixin`, which works similarly to the current way that the program handles exceptions, but on one mix-in
+- [ ] A subcommand to compute and print the JAR's checksum, so you'd run `java -jar checksum-x.x.x.jar checksum` instead of `java -jar checksum-x.x.x.jar check checksum-x.x.x.jar`

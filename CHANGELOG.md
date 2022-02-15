@@ -1,3 +1,8 @@
+# 0.0.4
+- Minor changes to how the program prints error messages
+- Added a `--verbose` flag for printing stack traces instead
+- Isolated `Check.call`'s computation code to `Check.compute`
+  - As a byproduct, a new subcommand was added: `checksum`, used to check the JAR's checksum
 # 0.0.3
 - Swapped `--version` and `--help` flags for subcommands, `version` and `help`
 - Added a `update` subcommand, though not implemented yet as at this stage, I am yet to publish the repo on Github
